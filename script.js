@@ -1,4 +1,3 @@
-// script.js
 const contacts = {
    "Anao": {
     "Fire": { number: "Anao Fire Dept - 0945-516-2458", logo: "fire_logo.png" },
