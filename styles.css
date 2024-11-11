@@ -15,7 +15,7 @@ body {
 
 header {
     text-align: center;
-    padding: 40px 20px;
+    padding: 10px 10px;
     background-color: #00796b;
     color: #fff;
     width: 100%;
@@ -24,30 +24,81 @@ header {
 }
 
 header h1 {
-    font-size: 2.5em;
     font-weight: 700;
+    vertical-align: text-top;
 }
 
 header p {
-    font-size: 1.2em;
     margin-top: 10px;
+    vertical-align: text-top;
 }
 
-.top-logo {
-    width: 300px; 
-    position: absolute;
+.top-logo.left {
+    height: auto;
+    width: 70%;  
     top: 0px;
+    vertical-align: text-top;
+
 }
 
-.left {
-    left: 20px;
+.top-logo.right {
+    width: 31%;
+    vertical-align: text-top;
+    height: auto;
 }
 
-.right {
-    right: 90px;
-    top: 15px;
-    width: 120px;
+.container{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    align-content: flex-start;
 }
+
+.container1{
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;  
+    flex-grow: 0;
+}
+
+.container2{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+
+.container3{
+   
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center; 
+    width: 1px;
+}
+
+.container1, .container3{
+    width: 30%;
+    height: auto;
+    flex-shrink: 0;
+    align-items: flex-end;
+    justify-content: center;
+    align-content: flex-start;
+}
+
+.container1 img, .container3 img{
+   
+    object-fit: contain;
+}
+
 
 main {
     margin: 20px auto;     width: 80%;
@@ -107,9 +158,24 @@ button:hover {
 
 footer {
     margin-top: auto;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
     width: 100%;
     background-color: #333;
     color: #fff;
-    font-size: 
+    font-size:
+}
+
+@media (max-width: 670px) {
+    .top-logo.right {
+        width: 50%;
+    }
+
+    .top-logo.left {
+        width: 125%;
+    }    
+
+    .text {
+        display: none;
+    }
+}
